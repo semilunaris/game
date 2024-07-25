@@ -1,0 +1,85 @@
+/* Общие стили для Fallout/Pit-Boy */
+body {
+    background-color: #2d2d2d; /* Тёмный фон */
+    color: #00ff00; /* Зелёный цвет текста, как на экране Pit-Boy */
+    font-family: 'Courier New', Courier, monospace; /* Моноширинный шрифт */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Полупрозрачный чёрный фон */
+}
+
+.modal-content {
+    background-color: #1b1b1b; /* Тёмно-серый фон модального окна */
+    margin: 15% auto;
+    padding: 20px;
+    border: 3px solid #00ff00; /* Зелёные границы */
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 0 10px #00ff00;
+    color: #00ff00;
+    text-align: center;
+}
+
+.modal-image {
+    display: block;
+    margin: 0 auto 15px auto;
+    border: 2px solid #00ff00; /* Зелёная рамка вокруг изображения */
+    width: 500px;
+    
+}
+
+.modal-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.modal-text {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+/* Стили для кнопок */
+#openModal, .modal-button {
+    background-color: #3a3a3a; /* Тёмный фон */
+    color: #00ff00; /* Зелёный текст */
+    border: 2px solid #00ff00; /* Зелёные границы */
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 5px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px; /* Скруглённые углы */
+    box-shadow: 0 0 5px #00ff00; /* Зелёная тень */
+}
+
+#openModal:hover, .modal-button:hover {
+    background-color: #282828; /* Немного светлее при наведении */
+}
+
+.close {
+    color: #00ff00;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ff0000; /* Красный цвет при наведении */
+}

@@ -1,0 +1,15 @@
+{
+  "name": "my-project",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
+    "server": "npx json-server db.json"
+  },
+  "devDependencies": {
+    "parcel": "latest"
+  },
+  "dependencies": {
+    "json-server": "^1.0.0-beta.1"
+  }
+}
