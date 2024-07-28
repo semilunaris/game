@@ -1,9 +1,10 @@
-function fetchEvent(){fetch(`http://localhost:3000/posts/${id}`)  .then((response) => {
+function fetchEvent(){fetch(`http://localhost:3000/posts/${id}`).then((response) => {
     return response.json();
   })
   .then((data) => {
     console.log(data);
     render(data)
+    console.log(data)
   });
 }
   // Получаем элементы модального окна и кнопки
@@ -15,7 +16,6 @@ const btnClose2 = document.querySelector(".close2");
 let id = ''
 const textEl = document.querySelector('.modal-text')
 const span1 = document.querySelector('.span1')
-const span2 = document.querySelector('.span2')
 const title = document.querySelector('.modal-title')
 // Открываем модальное окно при клике на кнопку
 
@@ -47,14 +47,14 @@ window.onclick = function(event) {
 }
 
 function getRandom() {
-    id = Math.floor(Math.random() * 10) + 1; // Генерируем случайное число от 1 до 10
+    id = Math.floor(Math.random() * 12) + 1; // Генерируем случайное число от 1 до 10
     console.log(id);
 }
 
 function render(event){
 textEl.textContent = event.description 
-span1.textContent = event.solution1
-span2.textContent = event.solution2
+span1.textContent = "Забрати "+event.profit
+
 title.textContent = event.title
 
 }
